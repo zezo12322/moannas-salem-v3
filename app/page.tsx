@@ -151,8 +151,8 @@ function CampaignCard({
   return (
     <motion.div
       variants={fadeInUp}
-      whileHover={{ y: -4, transition: { duration: 0.25, ease: "easeOut" } }}
-      className="h-full"
+      whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.25, ease: "easeOut" } }}
+      className="h-full group"
     >
       <Card className="!p-0 overflow-hidden h-full">
         <div className="relative h-44 w-full overflow-hidden">
@@ -161,7 +161,7 @@ function CampaignCard({
             alt={`صورة حملة ${title}`}
             fill
             sizes="(min-width: 1024px) 320px, (min-width: 640px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <span
             className={`absolute top-3 right-3 text-xs font-cairo font-semibold px-3 py-1 rounded-full ${badgeClass}`}
@@ -275,8 +275,8 @@ export default function HomePage() {
             animate="visible"
             className="relative aspect-[16/10] sm:aspect-[16/9] md:aspect-[3/4] lg:aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 lg:max-w-none order-2 lg:order-2"
           >
-            <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full bg-secondary/20 blur-2xl" aria-hidden="true" />
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-accent/15 blur-2xl" aria-hidden="true" />
+            <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full bg-secondary/20 blur-2xl animate-float" aria-hidden="true" />
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-accent/15 blur-2xl animate-float" style={{ animationDelay: "2s" }} aria-hidden="true" />
             <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5">
               <Image
                 src="/images/power-fist.jpg"

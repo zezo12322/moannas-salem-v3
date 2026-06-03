@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { OrganizationSchema } from "@/components/OrganizationSchema";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -62,6 +63,7 @@ export default function RootLayout({
       className={`${cairo.variable} ${tajawal.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-bg overflow-x-hidden">
+        <ScrollProgress />
         <OrganizationSchema />
         <a
           href="#main-content"
